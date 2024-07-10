@@ -40,7 +40,7 @@ if (typeof document !== "undefined") {
         })
     }
 
-    function addItem (item) {
+    function addItem(item) {
         fetch("./api/items", { 
             method: "POST",
             headers: {
@@ -63,7 +63,7 @@ if (typeof document !== "undefined") {
         const newName = prompt("Enter new name")
         if (newName) {
             updateItem (id, {name: newName})
-            logAction("User edited item with id ${id}")
+            logAction(`User edited item with id ${id}`)
         }
     }
 
@@ -92,7 +92,7 @@ if (typeof document !== "undefined") {
         })
         .then(() => {
             fetchItems()
-            logAction("User deleted item with id ${id}")
+            logAction(`User deleted item with id ${id}`)
         })
         .catch(error => {
             console.error("Error deleting item", error)
